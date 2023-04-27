@@ -18,15 +18,15 @@ const bull = (
 const card = (
     <React.Fragment>
         <CardContent>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant='h5' color="text.secondary" sx={{ fontWeight: 'bold' }} gutterBottom>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', margin: '8px 0' }}>
+                <Typography variant='subtitle2' color="text.secondary" sx={{ fontWeight: 'bold' }} gutterBottom>
                     Inbox
                 </Typography>
-                <Button variant='text' sx={{ fontWeight: '600', fontSize: '14px' }} >
+                <Button variant='text' sx={{ fontWeight: '600', fontSize: '14px', color: '#3751FF' }} >
                     View Details
                 </Button>
             </Box>
-            <Typography variant="h6" sx={{ fontSize: '12px', position: 'relative', bottom: '13px', fontWeight: '400' }}>
+            <Typography variant="h6" sx={{ fontSize: '12px', position: 'relative', bottom: '21px', fontWeight: '400' }}>
                 Group: Quotation
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '96%' }}>
@@ -37,7 +37,7 @@ const card = (
                     4:39
                 </Typography></Box>
             <hr />
-            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '96%' }}>
                 <Typography variant="body2">
                     Customer support id#22234
                 </Typography>
@@ -50,8 +50,10 @@ const card = (
 
 export default function DashboardCard() {
     return (
-        <Box sx={{ minWidth: 275 }}>
-            <Card variant="outlined">{card}</Card>
+        <Box sx={{ minWidth: 275, }}>
+            <Card variant="outlined" sx={{
+                borderRadius: '8px'
+            }}>{card}</Card>
         </Box>
     );
 }

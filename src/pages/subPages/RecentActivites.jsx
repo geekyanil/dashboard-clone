@@ -19,11 +19,11 @@ const card = (
     <>
 
         <CardContent>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant='h5' color="text.secondary" sx={{ fontWeight: 'bold' }} gutterBottom>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', margin: '8px 0' }}>
+                <Typography variant='subtitle2' color="text.secondary" sx={{ fontWeight: 'bold', padding: '6px 0' }} gutterBottom>
                     Recent Activities
                 </Typography>
-                <Button variant='text' >
+                <Button variant='subtitle2' size='small' sx={{ fontWeight: '600', fontSize: '14px', padding: '6px 0', color: '#3751FF' }} >
                     View All
                 </Button>
             </Box>
@@ -36,7 +36,7 @@ const card = (
                             color: ' #3751FF',
                         },
                     }} />
-                    <Typography color="text.secondary">
+                    <Typography color="text.secondary" variant='body2'>
                         Confirm order update
                     </Typography>
                 </Box>
@@ -53,7 +53,7 @@ const card = (
                             color: '#FF0303',
                         },
                     }} />
-                    <Typography color="text.secondary">
+                    <Typography color="text.secondary" variant='body2'>
                         Finish shipping update
                     </Typography>
                 </Box>
@@ -70,7 +70,7 @@ const card = (
                             color: '#C5C7CD',
                         },
                     }} />
-                    <Typography color="text.secondary">
+                    <Typography color="text.secondary" variant='body2'>
                         Create new order
                     </Typography>
                 </Box>
@@ -87,7 +87,7 @@ const card = (
                             color: ' #3751FF',
                         },
                     }} />
-                    <Typography color="text.secondary">
+                    <Typography color="text.secondary" variant='body2'>
                         Update payment report
                     </Typography>
                 </Box>
@@ -102,8 +102,8 @@ const card = (
 
 export default function RecentActivites() {
     return (
-        <Box sx={{ minWidth: 275 }}>
-            <Card variant="outlined">{card}</Card>
+        <Box sx={{ minWidth: 275, position: 'relative', bottom: '10px', padding: '15px 0px', marginTop: '10px' }}>
+            <Card variant="outlined" sx={{ borderRadius: '8px' }}>{card}</Card>
         </Box>
     );
 }

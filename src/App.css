@@ -23,7 +23,40 @@ NavLink {
 #dashboard,
 #products,
 #customers {
-  margin-top: 6%;
+  margin-top: 7%;
   display: flex;
   margin-left: 15%;
+}
+
+/* @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  } */
+
+@media only screen and (max-width: 768px) {
+  #dashboard,
+  #products,
+  #customers {
+    margin-top: 7%;
+    display: flex;
+    margin-left: 25%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #dashboard,
+  #products,
+  #customers {
+    margin-top: 10%;
+    display: flex;
+    margin-left: 25%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  #dashboard,
+  #products,
+  #customers {
+    margin-top: 7%;
+    display: flex;
+    margin-left: 25%;
+  }
 }

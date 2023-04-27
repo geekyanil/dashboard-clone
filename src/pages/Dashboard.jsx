@@ -22,22 +22,23 @@ const Dashboard = () => {
     return (
         <div id='dashboard'>
             <Box sx={{ width: '100%' }}>
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columnGap={12}>
-                    <Grid item xs={4}>
+                <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }} columnGap={12}>
+                    <Grid item xs={4} md={5} sm={3}>
                         <DashboardCard />
                     </Grid>
-                    <Grid item xs={6} >
+                    <Grid item xs={6} md={5} sm={6} >
                         <LineChart />
                     </Grid>
-                    <Grid item xs={4} sx={{ position: 'relative', bottom: '150px' }}>
+                    <Grid item xs={4} md={5} sm={3} className='recentAcivity'>
                         <RecentActivites />
                     </Grid>
                 </Grid>
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columnGap={12} sx={{ position: 'relative', bottom: '100px' }}>
-                    <Grid item xs={8} >
+                {/* <RecentActivites /> */}
+                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columnGap={12} sx={{ padding: '15px 0px' }}>
+                    <Grid item xs={8} md={6} >
                         <BarChart />
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={3} md={3} >
                         <StatOverview />
                     </Grid>
                 </Grid>

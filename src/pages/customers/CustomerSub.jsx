@@ -106,7 +106,7 @@ export default function CustomerSub() {
                         // onChange={(e, v) => filterData(v)}
                         getOptionLabel={(rows) => rows.name || ""}
                         renderInput={(params) => (
-                            <TextField {...params} size="small" label="Search By Name" sx={{ marginLeft: '4px' }} />
+                            <TextField {...params} size="small" label="Search By Name" sx={{ marginLeft: '4px', width: '170px' }} />
                         )}
                     />
 
@@ -120,6 +120,8 @@ export default function CustomerSub() {
                             type="search"
                             variant="outlined"
                             size='small'
+                            sx={{ width: '170px' }}
+
                         />
                         <Button variant='contained' sx={{ marginLeft: '10px', backgroundColor: '#34A853' }}>Find</Button>
                     </Box>

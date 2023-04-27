@@ -106,7 +106,7 @@ export default function ProductsSub() {
                         // onChange={(e, v) => filterData(v)}
                         getOptionLabel={(rows) => rows.name || ""}
                         renderInput={(params) => (
-                            <TextField {...params} size="small" label="Select Category" sx={{ marginLeft: '4px' }} />
+                            <TextField {...params} size='small' label="Select Category" sx={{ marginLeft: '4px', width: '200px' }} />
                         )}
                     />
 
@@ -134,14 +134,16 @@ export default function ProductsSub() {
                             type="search"
                             variant="outlined"
                             size="small"
+                            sx={{ width: '170px' }}
                         />
                         <Button variant='contained' sx={{ marginLeft: '10px', backgroundColor: '#34A853' }}>Find</Button>
                     </Box>
 
                 </Stack>
-                <Button variant="outlined" sx={{ color: '#34A853', borderBlockColor: '#34A853' }}>
+                <Button variant="outlined" sx={{ color: '#34A853', borderColor: '#34A853', borderWidth: '3px', fontWeight: '600' }}>
                     Add Product
-                </Button></Box>
+                </Button>
+            </Box>
 
             <TableContainer sx={{ maxHeight: 440, marginTop: '20px' }}>
                 <Table stickyHeader aria-label="sticky table">

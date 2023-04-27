@@ -35,7 +35,7 @@ const card = (
 
 export default function StatOverview() {
     return (
-        <Box sx={{ minWidth: 275 }}>
+        <Box sx={{ minWidth: 275, marginTop: '25px' }}>
             <Card variant="outlined">{card}</Card>
         </Box>
     );
