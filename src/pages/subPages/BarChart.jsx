@@ -37,8 +37,8 @@ const BarChart = () => {
     };
     const options = {}
     return (
-        <div>
-            <Bar data={data} options={options}>
+        <div id='barChart' style={{ width: '650px', height: '685px' }}>
+            <Bar data={data} options={options} >
             </Bar>
         </div>
     )

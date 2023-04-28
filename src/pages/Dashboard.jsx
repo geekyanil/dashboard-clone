@@ -22,7 +22,16 @@ const Dashboard = () => {
     return (
         <div id='dashboard'>
             <Box sx={{ width: '100%' }}>
-                <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }} columnGap={12}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', margin: '4px', padding: '6px' }}>
+                    <DashboardCard />
+                    <LineChart />
+                </Box>
+                <Box sx={{ position: 'relative', margin: '4px', padding: '6px', bottom: '400px' }}>
+                    <RecentActivites />
+                </Box>
+
+
+                {/* <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }} columnGap={12}>
                     <Grid item xs={4} md={5} sm={3}>
                         <DashboardCard />
                     </Grid>
@@ -32,16 +41,20 @@ const Dashboard = () => {
                     <Grid item xs={4} md={5} sm={3} className='recentAcivity'>
                         <RecentActivites />
                     </Grid>
-                </Grid>
+                </Grid> */}
                 {/* <RecentActivites /> */}
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columnGap={12} sx={{ padding: '15px 0px' }}>
+                {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columnGap={12} sx={{ padding: '15px 0px', position: 'relative', bottom: '260px' }}>
                     <Grid item xs={8} md={6} >
                         <BarChart />
                     </Grid>
                     <Grid item xs={3} md={3} >
                         <StatOverview />
                     </Grid>
-                </Grid>
+                </Grid> */}
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', padding: '15px', margin: '6px 2px', position: 'relative', bottom: '380px' }}>
+                    <BarChart />
+                    <StatOverview />
+                </Box>
             </Box>
 
 

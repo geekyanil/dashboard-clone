@@ -50,7 +50,7 @@ const card = (
 
 export default function DashboardCard() {
     return (
-        <Box sx={{ minWidth: 275, }}>
+        <Box sx={{ minWidth: 524, height: '153px' }}>
             <Card variant="outlined" sx={{
                 borderRadius: '8px'
             }}>{card}</Card>

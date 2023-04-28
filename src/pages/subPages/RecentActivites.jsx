@@ -1,7 +1,9 @@
 import React from 'react'
 import { pink } from '@mui/material/colors';
 import Checkbox from '@mui/material/Checkbox';
-import { Box, Button, Card, CardContent, Typography } from '@mui/material';
+import { Box, Button, CardContent, Typography } from '@mui/material';
+import Card from '@mui/material/Card';
+
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -40,7 +42,7 @@ const card = (
                         Confirm order update
                     </Typography>
                 </Box>
-                <Button variant='contained' size="small" sx={{ backgroundColor: '#FEC400' }} >
+                <Button variant='contained' size="small" sx={{ backgroundColor: '#FEC400', width: '50px', height: '24px', padding: '5px', borderRadius: '8px' }} >
                     Urgent
                 </Button>
             </Box>
@@ -57,7 +59,7 @@ const card = (
                         Finish shipping update
                     </Typography>
                 </Box>
-                <Button variant='contained' size="small" sx={{ backgroundColor: '#FEC400' }} >
+                <Button variant='contained' size="small" sx={{ backgroundColor: '#FEC400', width: '50px', height: '24px', padding: '5px', borderRadius: '8px' }} >
                     Urgent
                 </Button>
             </Box>
@@ -74,7 +76,7 @@ const card = (
                         Create new order
                     </Typography>
                 </Box>
-                <Button variant='contained' size="small" sx={{ backgroundColor: '#29CC97' }}>
+                <Button variant='contained' size="small" sx={{ backgroundColor: '#29CC97', borderRadius: '8px', width: '54px', height: '24px' }}>
                     New
                 </Button>
             </Box>
@@ -91,7 +93,7 @@ const card = (
                         Update payment report
                     </Typography>
                 </Box>
-                <Button variant='outlined' size='small' sx={{ width: '14px' }}  >
+                <Button variant='outlined' sx={{ width: '76px', height: '14px', background: '#F0F1F7', borderRadius: '8px', padding: '11px' }}  >
                     Default
                 </Button>
             </Box>
@@ -102,7 +104,7 @@ const card = (
 
 export default function RecentActivites() {
     return (
-        <Box sx={{ minWidth: 275, position: 'relative', bottom: '10px', padding: '15px 0px', marginTop: '10px' }}>
+        <Box sx={{ width: 524, height: '316px', position: 'relative', bottom: '10px', padding: '15px 0px', marginTop: '10px', }}>
             <Card variant="outlined" sx={{ borderRadius: '8px' }}>{card}</Card>
         </Box>
     );

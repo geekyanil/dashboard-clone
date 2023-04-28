@@ -87,9 +87,9 @@ const StyledAccount = styled('div')(({ theme }) => ({
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    backgroundColor: alpha(theme.palette.common.black, 0.15),
     '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
+        backgroundColor: alpha(theme.palette.common.black, 0.25),
     },
     marginLeft: 0,
     width: '100%',
@@ -150,7 +150,7 @@ function Sidenavbar(props) {
     const drawer = (
         <Box>
             <h2 style={{ color: '#34A853', display: 'flex', justifyContent: 'center' }}>पौरखी नेपाली </h2>
-            <Divider />
+
             <List>
                 <ListItem disablePadding onClick={() => navigate('/')}>
                     <ListItemButton>
@@ -220,8 +220,12 @@ function Sidenavbar(props) {
                     </ListItemButton>
                 </ListItem>
 
+                <Box>
+                    <Button variant='contained' sx={{ position: 'relative', top: '120px', display: 'flex', margin: '0 auto' }}>View Ticket</Button>
+                </Box>
+
             </List>
-            <Divider />
+
 
         </Box>
     );
@@ -231,7 +235,8 @@ function Sidenavbar(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar style={{ background: '#2E3B55' }}
+            {/* <StyledAccount /> */}
+            <AppBar style={{ background: '#f4f4f4', borderRadius: 'none', borderBottom: 'none' }}
                 position="fixed"
                 sx={{
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
@@ -249,10 +254,10 @@ function Sidenavbar(props) {
                         <MenuIcon />
                     </IconButton> */}
                     <Box style={{ width: '65%', display: 'flex', justifyContent: 'space-between' }}>
-                        <Typography variant="h6" noWrap component="div">
+                        <Typography variant="h6" noWrap component="div" sx={{ fontSize: '26px', color: '#535353' }}>
                             Overview
                         </Typography>
-                        <Search >
+                        <Search sx={{ backgroundBlendMode: 'revert' }}>
                             <SearchIconWrapper>
                                 <SearchIcon />
                             </SearchIconWrapper>
@@ -272,7 +277,7 @@ function Sidenavbar(props) {
                             edge="end"
                             color="inherit"
                         >
-                            <MoreIcon />
+                            <MoreIcon sx={{ color: 'black' }} />
                         </IconButton>
 
 
@@ -282,7 +287,7 @@ function Sidenavbar(props) {
                             color="inherit"
                         >
                             <Badge badgeContent={17} color="error">
-                                <NotificationsIcon />
+                                <NotificationsIcon sx={{ color: 'black' }} />
                             </Badge>
                         </IconButton>
 
@@ -295,7 +300,7 @@ function Sidenavbar(props) {
                             onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
-                            <AccountCircle />
+                            <AccountCircle sx={{ color: 'black' }} />
                         </IconButton>
 
 

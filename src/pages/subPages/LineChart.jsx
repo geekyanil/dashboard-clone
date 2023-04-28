@@ -18,6 +18,15 @@ const LineChart = () => {
             pointBorderWidth: 4,
             tension: 0.5
 
+        },
+        {
+            data: [7, 8.8, 5, 9, 5, 9, 8],
+            backgroundColor: 'transparent',
+            borderColor: '#f26c6d',
+            pointBorderColor: 'transparent',
+            pointBorderWidth: 4,
+            tension: 0.5
+
         }]
     };
     const options = {
@@ -42,7 +51,7 @@ const LineChart = () => {
         }
     };
     return (
-        <div>
+        <div id='lineChart' style={{ width: '600px', height: '594px', borderRadius: '10px' }}>
             <Line data={data} options={options}></Line>
         </div>
     )
